@@ -1,0 +1,245 @@
+/* ============================================================
+   UMANG 2025 — REGISTER PAGE CSS
+   Clean • Modern • Responsive
+   ============================================================ */
+
+/* ================= RESET ================= */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  min-height: 100%;
+}
+
+body {
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: linear-gradient(180deg, #07060a, #040306);
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+/* ================= VARIABLES ================= */
+:root {
+  --bg-dark: #07060a;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-border: rgba(255, 255, 255, 0.12);
+
+  --text-strong: #ffffff;
+  --text-muted: #b9c4cf;
+
+  --accent: #ff4b1f;
+  --accent-soft: rgba(255, 75, 31, 0.15);
+
+  --radius: 16px;
+}
+
+/* ================= HEADER ================= */
+.site-header {
+  width: 100%;
+  border-bottom: 1px solid var(--panel-border);
+  background: rgba(0, 0, 0, 0.65);
+  backdrop-filter: blur(8px);
+}
+
+.nav-shell {
+  max-width: 1200px;
+  margin: auto;
+  padding: 16px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand-mark {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.brand-tagline {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.nav-links a:hover {
+  color: var(--text-strong);
+}
+
+/* ================= PAGE WRAPPER ================= */
+.register-page {
+  max-width: 800px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+
+/* ================= HEADER SECTION ================= */
+.register-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section-eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.section-description {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin: auto;
+}
+
+/* ================= FORM CARD ================= */
+.register-form-section {
+  background: var(--panel);
+  border: 1px solid var(--panel-border);
+  border-radius: var(--radius);
+  padding: 32px;
+  backdrop-filter: blur(12px);
+}
+
+/* ================= FORM ================= */
+.register-form {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group select {
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--panel-border);
+  background: rgba(0, 0, 0, 0.4);
+  color: var(--text-strong);
+  font-size: 0.95rem;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 2px var(--accent-soft);
+}
+
+/* Team name spans full width */
+#team-name-group {
+  grid-column: span 2;
+}
+
+/* ================= ACTIONS ================= */
+.form-actions {
+  grid-column: span 2;
+  display: flex;
+  gap: 14px;
+  margin-top: 10px;
+}
+
+/* ================= BUTTONS ================= */
+.btn {
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.25s ease;
+  text-align: center;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #ff4b1f, #ff9068);
+  color: #000;
+  font-weight: 600;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 25px rgba(255, 75, 31, 0.4);
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-muted);
+  border: 1px solid var(--panel-border);
+}
+
+.btn-ghost:hover {
+  color: var(--text-strong);
+  border-color: var(--accent);
+}
+
+/* ================= STATUS TEXT ================= */
+.form-status {
+  grid-column: span 2;
+  margin-top: 12px;
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+
+/* ================= FOOTER ================= */
+.site-footer {
+  text-align: center;
+  padding: 30px 15px;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  border-top: 1px solid var(--panel-border);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+  .register-form {
+    grid-template-columns: 1fr;
+  }
+
+  #team-name-group,
+  .form-actions,
+  .form-status {
+    grid-column: span 1;
+  }
+
+  .section-title {
+    font-size: 1.6rem;
+  }
+}

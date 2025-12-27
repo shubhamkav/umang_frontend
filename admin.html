@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard – Umang</title>
+  <style>
+    body {
+      background: #0b0b0e;
+      color: #fff;
+      font-family: Arial;
+      padding: 20px;
+    }
+
+    h1 {
+      margin-bottom: 20px;
+    }
+
+    /* ===== EXPORT SECTION ===== */
+    .export-section {
+      background: #141418;
+      padding: 15px;
+      margin-bottom: 25px;
+      border-radius: 6px;
+    }
+
+    .export-section h2 {
+      margin-top: 0;
+      color: #ff7a45;
+    }
+
+    .export-section select,
+    .export-section button {
+      padding: 8px;
+      margin-right: 10px;
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
+    .export-section button {
+      background: #ff7a45;
+      border: none;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    /* ===== FILTER ===== */
+    select {
+      padding: 6px;
+      margin-bottom: 15px;
+    }
+
+    /* ===== TABLE ===== */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: #141418;
+    }
+
+    th, td {
+      padding: 10px;
+      border: 1px solid #222;
+      text-align: left;
+      font-size: 14px;
+    }
+
+    th {
+      background: #ff7a45;
+      color: #000;
+    }
+
+    tr:nth-child(even) {
+      background: #1b1b20;
+    }
+  </style>
+</head>
+<body>
+
+<h1>📊 Umang – Admin Dashboard</h1>
+
+<!-- ================= EXPORT SECTION ================= -->
+<section class="export-section">
+  <h2>📥 Export Registrations (Excel)</h2>
+
+  <label>Category:</label>
+  <select id="exportCategory">
+    <option value="sport">Sports</option>
+    <option value="cultural">Cultural</option>
+  </select>
+
+  <label>Event:</label>
+  <select id="exportEvent"></select>
+
+  <br />
+
+  <button id="downloadExcel">Download Excel</button>
+</section>
+
+<!-- ================= FILTER ================= -->
+<label>Filter by Category:</label>
+<select id="categoryFilter">
+  <option value="all">All</option>
+  <option value="sport">Sports</option>
+  <option value="cultural">Cultural</option>
+</select>
+
+<!-- ================= TABLE ================= -->
+<table>
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Name</th>
+      <th>Roll</th>
+      <th>Dept</th>
+      <th>Year</th>
+      <th>Email</th>
+      <th>Event</th>
+      <th>Category</th>
+      <th>Team</th>
+      <th>Time</th>
+    </tr>
+  </thead>
+  <tbody id="table-body"></tbody>
+</table>
+
+<script src="js/admin.js"></script>
+</body>
+</html>
